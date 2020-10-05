@@ -11,6 +11,8 @@ do_install() {
   cp ${REPO}/.config .
   make
   mv wpa_supplicant /bin/wpa_supplicant
+  mv wpa_passphrase /bin/wpa_passphrase
+  mv wpa_cli /bin/wpa_cli
 }
 
 do_download
