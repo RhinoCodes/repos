@@ -1,0 +1,14 @@
+# SEMC REPOS
+
+do_download() {
+  wget https://w1.fi/releases/wpa_supplicant-2.9.tar.gz
+  tar xvf wpa_supplicant-2.9.tar.gz
+  cd wpa_supplicant-2.9
+}
+
+do_install() {
+  cd wpa_supplicant
+  cp ${REPO}/.config .
+  make
+  mv wpa_supplicant /bin/wpa_supplicant
+}
