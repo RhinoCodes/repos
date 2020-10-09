@@ -1,0 +1,13 @@
+# SEMC REPOS
+
+do_download() {
+  wget https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch
+}
+
+do_install() {
+  chmod +x neofetch
+  mv neofetch /bin/
+}
+
+do_download
+do_install
